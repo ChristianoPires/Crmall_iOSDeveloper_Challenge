@@ -22,6 +22,7 @@ class TableViewCell : UITableViewCell {
     var genres : [Genre]?
     
     func setup(tvShow: TVShow) {
+        self.isHidden = false
         self.tvShow = tvShow
         guard let tvShow = self.tvShow else { return }
         self.titleLabel.text = tvShow.name
