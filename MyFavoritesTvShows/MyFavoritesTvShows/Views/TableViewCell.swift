@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
-class TableViewCell : UITableViewCell {
+protocol TableViewCellDelegate: class {
+    func doubleTapDetected(in cell: TableViewCell)
+}
+
+
+class TableViewCell : UITableViewCell, MultiTappable {
     
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,8 +23,20 @@ class TableViewCell : UITableViewCell {
     @IBOutlet weak var countVoteLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     
+   
+    weak var multiTapDelegate: MultiTappableDelegate?
+    lazy var tapCounter = ThreadSafeValue(value: 0)
+    
+    weak var delegate: TableViewCellDelegate?
+    
     var tvShow : TVShow?
     var genres : [Genre]?
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        initMultiTap()
+    }
     
     func setup(tvShow: TVShow) {
         self.isHidden = false
@@ -53,4 +70,14 @@ class TableViewCell : UITableViewCell {
     }
     
     
+}
+
+
+extension TableViewCell: MultiTappableDelegate {
+    func singleTapDetected(in view: MultiTappable) {
+        
+    }
+    
+    func doubleTapDetected(in view: MultiTappable) { self.delegate?.doubleTapDetected(in: self)
+    }
 }

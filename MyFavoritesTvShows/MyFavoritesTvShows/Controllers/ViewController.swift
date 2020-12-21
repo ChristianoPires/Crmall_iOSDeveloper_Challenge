@@ -49,15 +49,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+        cell.delegate = self
         cell.setup(tvShow: self.tvShows[indexPath.row])
         return cell
     }
-    
+//
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        tableView.deselectRow(at: indexPath, animated: true)
-//        self.selectedTVShow = self.tvShows[indexPath.row]
-//        self.performSegue(withIdentifier: "toDetail", sender: nil)
-//        self.img = (tableView.cellForRow(at: indexPath) as! MovieTableViewCell).posterImage.image
+//
+//
+////        self.selectedTVShow = self.tvShows[indexPath.row]
+////        self.performSegue(withIdentifier: "toDetail", sender: nil)
+////        self.img = (tableView.cellForRow(at: indexPath) as! MovieTableViewCell).posterImage.image
 //        //        Variables.originalTitle = DataSource.dataSourceCode[indexPath.row][0]
 //        //        Variables.genresName = DataSource.dataSourceCode[indexPath.row][1]
 //        //        Variables.overview = DataSource.dataSourceCode[indexPath.row][2]
@@ -70,3 +73,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //    }
     
 }
+
+extension ViewController: TableViewCellDelegate {
+    func doubleTapDetected(in cell: TableViewCell) {
+        if let indexPath = tableView.indexPath(for: cell) { print("doubleTap \(indexPath) ") }
+    }
+}
+
