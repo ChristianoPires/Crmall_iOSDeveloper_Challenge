@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         }
     }
     
+    var favoritesTvShows: [TVShow] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
@@ -53,30 +55,30 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(tvShow: self.tvShows[indexPath.row])
         return cell
     }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//
-//
-////        self.selectedTVShow = self.tvShows[indexPath.row]
-////        self.performSegue(withIdentifier: "toDetail", sender: nil)
-////        self.img = (tableView.cellForRow(at: indexPath) as! MovieTableViewCell).posterImage.image
-//        //        Variables.originalTitle = DataSource.dataSourceCode[indexPath.row][0]
-//        //        Variables.genresName = DataSource.dataSourceCode[indexPath.row][1]
-//        //        Variables.overview = DataSource.dataSourceCode[indexPath.row][2]
-//        //        Variables.posterPath = DataSource.dataSourceCode[indexPath.row][3]
-//        //        Variables.voteAverage = DataSource.dataSourceCode[indexPath.row][4]
-//        //        Variables.voteCount = DataSource.dataSourceCode[indexPath.row][5]
-//        //        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        //        let newViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        //        self.present(newViewController, animated: true, completion: nil)
-//    }
-    
+
 }
 
 extension ViewController: TableViewCellDelegate {
     func doubleTapDetected(in cell: TableViewCell) {
-        if let indexPath = tableView.indexPath(for: cell) { print("doubleTap \(indexPath) ") }
+        if let indexPath = tableView.indexPath(for: cell) {
+            print("doubleTap \(indexPath) ")
+            
+            for favorite in self.favoritesTvShows {
+                if favorite.id == self.tvShows[indexPath.row].id{
+                    print("ja e favorito")
+                    return
+                }
+            }
+            self.favoritesTvShows.append(self.tvShows[indexPath.row])
+            
+        
+            
+            print("ultimo favorito: ", self.favoritesTvShows.last?.name!)
+        }
+        print("favoritos count: ", self.favoritesTvShows.count)
+        for favorito in self.favoritesTvShows {
+            print("favorito: ", favorito.name)
+        }
     }
 }
 
