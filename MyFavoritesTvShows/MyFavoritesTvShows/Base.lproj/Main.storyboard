@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dbm-ho-d14">
-                                <rect key="frame" x="20" y="44" width="374" height="774"/>
+                                <rect key="frame" x="20" y="44" width="374" height="789"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="241" id="l62-vH-3Ti" customClass="TableViewCell" customModule="MyFavoritesTvShows">
@@ -155,7 +155,7 @@
                                 </prototypes>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2t3-RB-Sin">
-                                <rect key="frame" x="20" y="818" width="374" height="49"/>
+                                <rect key="frame" x="0.0" y="833" width="414" height="49"/>
                                 <items>
                                     <barButtonItem title="Favoritos" style="plain" id="wbq-Wm-Ep9">
                                         <connections>
@@ -169,14 +169,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Dbm-ho-d14" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3qc-7l-dnw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dbm-ho-d14" secondAttribute="trailing" constant="20" id="BeI-QE-Al4"/>
-                            <constraint firstItem="Dbm-ho-d14" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Iax-Vi-pGZ"/>
-                            <constraint firstAttribute="bottom" secondItem="2t3-RB-Sin" secondAttribute="bottom" constant="29" id="QKW-HA-ye5"/>
-                            <constraint firstItem="2t3-RB-Sin" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Sbo-77-kOh"/>
-                            <constraint firstItem="2t3-RB-Sin" firstAttribute="top" secondItem="Dbm-ho-d14" secondAttribute="bottom" id="UAc-b8-vVq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2t3-RB-Sin" secondAttribute="trailing" constant="20" id="bT2-bc-aN9"/>
-                            <constraint firstItem="2t3-RB-Sin" firstAttribute="top" secondItem="Dbm-ho-d14" secondAttribute="bottom" id="upU-8b-24R"/>
+                            <constraint firstAttribute="bottom" secondItem="2t3-RB-Sin" secondAttribute="bottom" constant="14" id="JzZ-6G-tgM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dbm-ho-d14" secondAttribute="trailing" constant="20" id="Rkb-e0-nTs"/>
+                            <constraint firstItem="2t3-RB-Sin" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dro-Kq-HI5"/>
+                            <constraint firstItem="2t3-RB-Sin" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i7g-Au-Aq7"/>
+                            <constraint firstItem="Dbm-ho-d14" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qMC-9C-cDC"/>
+                            <constraint firstItem="Dbm-ho-d14" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="s2B-sf-FkM"/>
+                            <constraint firstItem="2t3-RB-Sin" firstAttribute="top" secondItem="Dbm-ho-d14" secondAttribute="bottom" id="tLR-9G-WOQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ew8-8R-VbC"/>
@@ -335,7 +334,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUl-2E-htN">
-                                <rect key="frame" x="20" y="0.0" width="374" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Favoritos" id="v9V-K0-Vxx">
                                         <barButtonItem key="leftBarButtonItem" title="Voltar" style="plain" id="SnY-Vk-4Zg">
@@ -350,14 +349,14 @@
                         <viewLayoutGuide key="safeArea" id="7xX-J9-Z37"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PUl-2E-htN" firstAttribute="leading" secondItem="7xX-J9-Z37" secondAttribute="leading" constant="20" id="1Ao-xY-gEd"/>
-                            <constraint firstItem="PUl-2E-htN" firstAttribute="top" secondItem="7xX-J9-Z37" secondAttribute="top" id="7Hm-JE-Fuh"/>
-                            <constraint firstItem="7xX-J9-Z37" firstAttribute="trailing" secondItem="PUl-2E-htN" secondAttribute="trailing" constant="20" id="8Ob-Ie-ooQ"/>
-                            <constraint firstItem="m6K-69-nU1" firstAttribute="top" secondItem="PUl-2E-htN" secondAttribute="bottom" id="9lR-S3-cg1"/>
-                            <constraint firstItem="7xX-J9-Z37" firstAttribute="trailing" secondItem="m6K-69-nU1" secondAttribute="trailing" constant="20" id="hl1-Gm-GAB"/>
-                            <constraint firstItem="m6K-69-nU1" firstAttribute="top" secondItem="PUl-2E-htN" secondAttribute="bottom" id="t9B-A0-atS"/>
-                            <constraint firstItem="m6K-69-nU1" firstAttribute="bottom" secondItem="7xX-J9-Z37" secondAttribute="bottom" id="z8F-ww-0SO"/>
-                            <constraint firstItem="m6K-69-nU1" firstAttribute="leading" secondItem="7xX-J9-Z37" secondAttribute="leading" constant="20" id="zd0-VP-e8W"/>
+                            <constraint firstItem="PUl-2E-htN" firstAttribute="leading" secondItem="7xX-J9-Z37" secondAttribute="leading" id="2re-gz-W8P"/>
+                            <constraint firstItem="PUl-2E-htN" firstAttribute="top" secondItem="7xX-J9-Z37" secondAttribute="top" id="3FV-9C-Ove"/>
+                            <constraint firstItem="7xX-J9-Z37" firstAttribute="trailing" secondItem="m6K-69-nU1" secondAttribute="trailing" constant="20" id="AlX-Mc-YsQ"/>
+                            <constraint firstItem="m6K-69-nU1" firstAttribute="leading" secondItem="7xX-J9-Z37" secondAttribute="leading" constant="20" id="M5V-4P-YfT"/>
+                            <constraint firstItem="m6K-69-nU1" firstAttribute="top" secondItem="PUl-2E-htN" secondAttribute="bottom" id="OUi-xN-hvI"/>
+                            <constraint firstItem="m6K-69-nU1" firstAttribute="top" secondItem="PUl-2E-htN" secondAttribute="bottom" id="cBR-rO-MWc"/>
+                            <constraint firstItem="PUl-2E-htN" firstAttribute="trailing" secondItem="7xX-J9-Z37" secondAttribute="trailing" id="s1i-c9-xLe"/>
+                            <constraint firstItem="m6K-69-nU1" firstAttribute="bottom" secondItem="7xX-J9-Z37" secondAttribute="bottom" id="yWi-O8-deo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yqh-zI-6uj"/>
