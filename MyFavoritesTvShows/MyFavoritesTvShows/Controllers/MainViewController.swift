@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         }
     }
     
+    var listFavorites = false
     var favoritesTvShows: [TVShow] = []
     
     override func viewDidLoad() {
@@ -36,9 +37,28 @@ class ViewController: UIViewController {
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showFavorites" {
+            let controller = segue.destination as! FavoritesViewController
+            controller.favoritesTvShows = favoritesTvShows
+        }
+    }
+    
+    @IBAction func listFavorites(_ sender: Any) {
+        
+        performSegue(withIdentifier: "showFavorites", sender: self)
+        
+    }
+    
+    
+    
+    
+    
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("tableview tvshows count",self.tvShows.count)
@@ -58,7 +78,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 }
 
-extension ViewController: TableViewCellDelegate {
+
+
+
+extension MainViewController: TableViewCellDelegate {
     func doubleTapDetected(in cell: TableViewCell) {
         if let indexPath = tableView.indexPath(for: cell) {
             print("doubleTap \(indexPath) ")
