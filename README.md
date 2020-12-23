@@ -42,6 +42,14 @@ A funcionalidade de favoritar um programa funciona da seguinte maneira:
 Listar os programas favoritados:
   - Basta clicar no botão "favoritos" na toolBar, após o click ele te redireciona para outra tela com seus programas favoritos listados. Se quiser voltar para a primeira tela, basta clicar no botão "voltar" na navigationBar, e então voltará para a tela inicial onde pode continuar a ver os programas populares e favoritar mais programas.
   
+# Planos futuros
+
+Implementações:
+    - Launch screen;
+    - Icone;
+    - Função de desfavoritar um programa;
+    - Persistência dos dados referentes aos programas favoritados;
+  
 # Dúvidas e sugestões
 
 Se tiver dúvidas ou sugestões me mande um email.
