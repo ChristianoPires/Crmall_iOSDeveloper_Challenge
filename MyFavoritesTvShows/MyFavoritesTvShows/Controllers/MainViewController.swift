@@ -49,11 +49,6 @@ class MainViewController: UIViewController {
         performSegue(withIdentifier: "showFavorites", sender: self)
         
     }
-    
-    
-    
-    
-    
 }
 
 
@@ -93,9 +88,8 @@ extension MainViewController: TableViewCellDelegate {
                 }
             }
             self.favoritesTvShows.append(self.tvShows[indexPath.row])
-            
         }
-        print("favoritos count: ", self.favoritesTvShows.count)
     }
+    
 }
 

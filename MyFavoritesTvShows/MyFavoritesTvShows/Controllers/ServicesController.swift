@@ -42,7 +42,6 @@ extension Service {
                 do {
                     let data = try? JSONDecoder().decode(TVShowsResponse.self, from: dataResponse)
                     guard let d = data, let tvShows = d.tvShows else { return }
-                //    print("tvShows count = ",d.tvShows?.count)
                     callback(tvShows)
                 }
             }
@@ -72,7 +71,6 @@ extension Service {
                     let data = try? JSONDecoder().decode(GenresResponse.self, from: dataResponse)
                     guard let d = data, let genres = d.genres else { return }
                     Service.shared.genres = genres
-                //    print("genres count = ",d.genres?.count)
                     callback()
                 }
             }
