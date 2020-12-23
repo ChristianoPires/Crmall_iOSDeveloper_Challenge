@@ -45,10 +45,10 @@ Listar os programas favoritados:
 # Planos futuros
 
 Implementações:
-    - Launch screen;
-    - Icone;
-    - Função de desfavoritar um programa;
-    - Persistência dos dados referentes aos programas favoritados;
+  - Launch screen;
+  - Icone;
+  - Função de desfavoritar um programa;
+  - Persistência dos dados referentes aos programas favoritados;
   
 # Dúvidas e sugestões
 
