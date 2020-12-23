@@ -34,9 +34,18 @@ Dados Apresentados:
 Funcionalidades:
   - Listar os programas populares de televisão (função default do app);
   - Favoritar um programa;
-  - Listar os programas favoritados.
+  - Listar os programas favoritados (a listagem é estática, isso quer dizer que toda vez que fechar e abrir o app a lista é zerada).
   
-Tela:
+A funcionalidade de favoritar um programa funciona da seguinte maneira:
+  - Dê um duplo click no programa que deseja favoritar e pronto foi adicionado a lista. (Até o momento 23/12/2020, não foi implementado um feedback visual ou sensível para o usuário, quando implementado tal feedback o readme será atualizado.)
+  
+Listar os programas favoritados:
+  - Basta clicar no botão "favoritos" na toolBar, após o click ele te redireciona para outra tela com seus programas favoritos listados. Se quiser voltar para a primeira tela, basta clicar no botão "voltar" na navigationBar, e então voltará para a tela inicial onde pode continuar a ver os programas populares e favoritar mais programas.
+  
+# Dúvidas e sugestões
+
+Se tiver dúvidas ou sugestões me mande um email.
+  - Meu email é cristianof95@gmail.com;
 
   
 
