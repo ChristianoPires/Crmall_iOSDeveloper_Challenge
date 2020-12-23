@@ -25,8 +25,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
-            Service.shared.gettvShows { tvShows in
-                Service.shared.getTvShowsGenres {
+            Service.shared.getTvShows { tvShows in
+                Service.shared.getTvShowGenres {
                     self.tvShows = tvShows
                 }
             }
@@ -61,7 +61,7 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("tableview tvshows count",self.tvShows.count)
+      //  print("tableview tvshows count",self.tvShows.count)
         return self.tvShows.count
     }
     
@@ -94,14 +94,8 @@ extension MainViewController: TableViewCellDelegate {
             }
             self.favoritesTvShows.append(self.tvShows[indexPath.row])
             
-        
-            
-            print("ultimo favorito: ", self.favoritesTvShows.last?.name!)
         }
         print("favoritos count: ", self.favoritesTvShows.count)
-        for favorito in self.favoritesTvShows {
-            print("favorito: ", favorito.name)
-        }
     }
 }
 
